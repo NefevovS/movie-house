@@ -1,0 +1,21 @@
+.movieWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+.movieCover{
+    width: 315px;
+    height: 210px;
+}
+.movieTitle{
+    color: white;
+    font-weight: 700;
+    text-overflow:ellipsis;
+    font-style: 0.95em;
+}
+.movieYear{
+    color: #919191;
+    font-style: 0.85em;
+
+}
