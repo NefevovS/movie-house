@@ -2,10 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
+    row-gap: 3px;
 
 }
 .movieCover{
 
+}
+.movieCover__wrapper{
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
 }
 .movieTitle{
     color: black;
