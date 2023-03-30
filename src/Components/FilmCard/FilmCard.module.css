@@ -4,6 +4,7 @@
     justify-content: start;
     row-gap: 3px;
 
+
 }
 .movieCover{
 
@@ -12,6 +13,8 @@
     padding: 5px;
     background-color: white;
     border-radius: 5px;
+    position: relative;
+
 
 }
 .movieTitle{
@@ -25,7 +28,7 @@
     font-style: 0.85em;
 }
 .overlay{
-
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
