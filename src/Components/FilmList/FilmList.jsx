@@ -9,7 +9,6 @@ const FilmList = () => {
   const fetchFilm = async () => {
     const response = await FilmServise.getAll();
     setFilms(response.data.data.movies);
-    console.log(response.data.data.movies);
   };
   useEffect(() => {
     fetchFilm();
