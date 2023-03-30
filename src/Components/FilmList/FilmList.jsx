@@ -6,12 +6,7 @@ const FilmList = ({ films }) => {
   return (
     <div className={s.filmsContainer}>
       {films.map((film) => (
-        <FilmCard
-          key={film.id}
-          imgSrc={film.medium_cover_image}
-          movieTitle={film.title}
-          movieYear={film.year}
-        />
+        <FilmCard key={film.id} film={film} />
       ))}
     </div>
   );

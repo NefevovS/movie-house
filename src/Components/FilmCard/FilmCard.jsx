@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import s from "./FilmCard.module.css";
+import FilmButton from "../../UI/Button/FilmButton/FilmButton";
 
-const FilmCard = ({ imgSrc, movieTitle, movieYear }) => {
+const FilmCard = ({ film }) => {
   const [mouseOntheCard, setMouseOnTheCard] = useState(false);
+
   return (
     <div className={s.movieWrapper}>
       <div
@@ -10,7 +12,11 @@ const FilmCard = ({ imgSrc, movieTitle, movieYear }) => {
         onMouseEnter={() => setMouseOnTheCard(true)}
         onMouseLeave={() => setMouseOnTheCard(false)}
       >
-        <img src={imgSrc} alt="image" className={s.movieCover} />
+        <img
+          src={film.medium_cover_image}
+          alt="image"
+          className={s.movieCover}
+        />
         <div
           className={
             mouseOntheCard
@@ -18,14 +24,20 @@ const FilmCard = ({ imgSrc, movieTitle, movieYear }) => {
               : [s.overlay].join(" ")
           }
         >
-          <div>звездочка</div>
-          <div>рейтинг</div>
-          <div>жанры</div>
-          <div>кнопка</div>
+          <div>
+            <img src="../../assets/image/star.png" alt="star" />
+          </div>
+          <div>{film.rating}/10</div>
+          <div>
+            {film.genres.map((genre) => (
+              <div style={{ paddingBottom: "10px" }}>{genre}</div>
+            ))}
+          </div>
+          <span className={s.btn}>Подробнее</span>
         </div>
       </div>
-      <div className={s.movieTitle}>{movieTitle}</div>
-      <div className={s.movieYear}> {movieYear}</div>
+      <div className={s.movieTitle}>{film.title}</div>
+      <div className={s.movieYear}>{film.year}</div>
     </div>
   );
 };
