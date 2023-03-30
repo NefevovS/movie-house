@@ -12,6 +12,7 @@
     padding: 5px;
     background-color: white;
     border-radius: 5px;
+
 }
 .movieTitle{
     color: white;
@@ -22,5 +23,21 @@
 .movieYear{
     color: #919191;
     font-style: 0.85em;
+}
+.overlay{
 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: yellow;
+
+}
+.overlay.active{
+    display: flex;
 }
