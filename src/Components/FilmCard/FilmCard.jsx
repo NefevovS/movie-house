@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import s from "./FilmCard.module.css";
-import FilmButton from "../../UI/Button/FilmButton/FilmButton";
+import star from "../../assets/image/star.png";
+import { useNavigate } from "react-router-dom";
 
 const FilmCard = ({ film }) => {
   const [mouseOntheCard, setMouseOnTheCard] = useState(false);
-
+  const router = useNavigate();
   return (
     <div className={s.movieWrapper}>
       <div
@@ -25,15 +26,22 @@ const FilmCard = ({ film }) => {
           }
         >
           <div>
-            <img src="../../assets/image/star.png" alt="star" />
+            <img src={star} alt="star" />
           </div>
           <div>{film.rating}/10</div>
           <div>
             {film.genres.map((genre) => (
-              <div style={{ paddingBottom: "10px" }}>{genre}</div>
+              <div key={genre} style={{ paddingBottom: "10px" }}>
+                {genre}
+              </div>
             ))}
           </div>
-          <span className={s.btn}>Подробнее</span>
+          <span
+            className={s.btn}
+            onClick={() => router(`/movies/${film.slug}`)}
+          >
+            Подробнее
+          </span>
         </div>
       </div>
       <div className={s.movieTitle}>{film.title}</div>

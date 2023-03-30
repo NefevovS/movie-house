@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Header.module.css";
 import { ReactComponent as Glass } from "../../assets/image/glass.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,7 +18,7 @@ const Header = () => {
 
       <ul className={s.nav__wrapper}>
         <li>
-          <a href="#!">Home</a>
+          <Link to="/home">Home</Link>
         </li>
         <li>
           <a href="#!">4K</a>

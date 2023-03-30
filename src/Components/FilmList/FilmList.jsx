@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FilmCard from "../FilmCard/FilmCard";
 import s from "./FilmList.module.css";
+import { FilmServise } from "../../API/FilmServise";
 
-const FilmList = ({ films }) => {
+const FilmList = () => {
+  const [films, setFilms] = useState([]);
+
+  const fetchFilm = async () => {
+    const response = await FilmServise.getAll();
+    setFilms(response.data.data.movies);
+    console.log(response.data.data.movies);
+  };
+  useEffect(() => {
+    fetchFilm();
+  }, []);
+
   return (
     <div className={s.filmsContainer}>
       {films.map((film) => (
