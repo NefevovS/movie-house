@@ -8,19 +8,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
-.header__wrapper img{
-    padding: 10px;
-}
+
 .input__wrapper{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border:2px solid #333;
     border-radius: 20px;
     width: 250px;
     height: 35px;
     font-weight: bold;
+}
+.input__wrapper input{
+    margin-right: 10px;
 }
 .nav__wrapper{
     display: flex;
@@ -58,3 +60,10 @@
 .login_wrapper li:nth-child(1){
     padding-right: 5px;
 }
+.glass{
+    width: 30px;
+    height: 30px;
+    fill: #333;
+    padding-left: 7px;
+
+    }
