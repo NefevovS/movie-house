@@ -5,17 +5,16 @@
 
 }
 .movieCover{
-    width: 315px;
-    height: 210px;
+
 }
 .movieTitle{
-    color: white;
+    color: black;
     font-weight: 700;
     text-overflow:ellipsis;
     font-style: 0.95em;
 }
 .movieYear{
-    color: #919191;
+    color: black;
     font-style: 0.85em;
 
 }

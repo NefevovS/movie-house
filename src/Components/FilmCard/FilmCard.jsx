@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./FilmCard.module.css";
 
-const FilmCard = (imgSrc, movieTitle, movieYear) => {
+const FilmCard = ({ imgSrc, movieTitle, movieYear }) => {
   return (
     <div className={s.movieWrapper}>
       <img src={imgSrc} alt="image" className={s.movieCover} />

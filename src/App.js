@@ -6,20 +6,28 @@ function App() {
   const [films, setFilms] = useState([]);
   const fetchFilm = async () => {
     const response = await FilmServise.getAll();
-    setFilms(response.data.data.films);
+    setFilms(response.data.data.movies);
+    console.log(response.data.data.movies);
   };
   useEffect(() => {
     fetchFilm();
-    console.log(films);
-  }, [films]);
+  }, []);
 
   return (
-    <div className="App">
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div className="app">
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          columnGap: "15px",
+          rowGap: "15px",
+          justifyContent: "center",
+          padding: "30px 30px",
+        }}
+      >
         {films.map((film) => (
           <FilmCard
-            key={film.id}
-            imgSrc={film["small_cover_image"]}
+            imgSrc={film.medium_cover_image}
             movieTitle={film.title}
             movieYear={film.year}
           />
