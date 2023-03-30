@@ -5,4 +5,8 @@
     row-gap: 15px;
     justify-content: center;
     padding: 30px 30px;
+    padding-top:100px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #1d1d1d;
 }

@@ -14,13 +14,13 @@
     border-radius: 5px;
 }
 .movieTitle{
-    color: black;
+    color: white;
     font-weight: 700;
     text-overflow:ellipsis;
     font-style: 0.95em;
 }
 .movieYear{
-    color: black;
+    color: #919191;
     font-style: 0.85em;
 
 }

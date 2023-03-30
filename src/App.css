@@ -1,8 +1,8 @@
 .app{
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: darkolivegreen;
+
 }
 body{
-    background-color: lightgrey;
+    background-color: #171717;
+
 }
+*{font-family: Arimo,Arial,Helvetica,"Lucida Grande",sans-serif;}
