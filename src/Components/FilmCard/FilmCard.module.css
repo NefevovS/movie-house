@@ -3,6 +3,10 @@
     flex-direction: column;
     justify-content: start;
     row-gap: 3px;
+    width: 230px;
+    height: 386px;
+
+
 
 
 }
@@ -14,12 +18,20 @@
     background-color: white;
     border-radius: 5px;
     position: relative;
+    width: 230px;
+    height: 345px;
+
 }
 .movieTitle{
     color: white;
     font-weight: 700;
-    text-overflow:ellipsis;
     font-style: 0.95em;
+    height: 18px;
+    width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
 }
 .movieYear{
     color: #919191;
