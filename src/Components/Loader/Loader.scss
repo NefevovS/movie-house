@@ -28,18 +28,7 @@ $blue: yellow;
     }
 }
 
-h1, h3 {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: lighter;
-    color: $grey;
-    letter-spacing: 1.5px;
-}
 
-h1 {
-    margin: 50px auto;
-}
 
 @mixin loaderDivMixin {
     border-radius: 50%;
@@ -49,6 +38,7 @@ h1 {
 }
 
 .loader {
+    top:30vh;
     position: relative;
     margin: 75px auto;
     width: 150px;

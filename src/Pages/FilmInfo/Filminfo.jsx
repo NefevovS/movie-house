@@ -3,23 +3,31 @@ import { useParams } from "react-router-dom";
 import { FilmServise } from "../../API/FilmServise";
 import Loader from "../../Components/Loader/Loader";
 import { useFetching } from "../../hooks/useFetching";
+import s from "./Filminfo.module.css";
+import FilmInfoContent from "../FilminfoContent/FilmInfoContent";
+
 
 const Filminfo = () => {
   const params = useParams();
-  const [film, setFilm] = useState([]);
+  const [film, setFilm] = useState({});
 
-  const fetchFilm = async () => {
-    const response = await FilmServise.getFilmByID(params.id);
+  const fetchFilm = async (id) => {
+    const response = await FilmServise.getFilmByID(id);
     setFilm(response.data.data.movie);
   };
   const [fetching, isLoading, error] = useFetching(fetchFilm);
   useEffect(() => {
-    fetching();
+    fetching(params.id);
+
   }, []);
 
   return (
-    <div style={{ paddingTop: "200px", color: "white" }}>
-      {isLoading ? <Loader /> : <div>{film.id}</div>}
+    <div className={s.filminfo}>
+      {isLoading ? <Loader /> :
+          <FilmInfoContent film={film} />
+
+
+      }
     </div>
   );
 };
