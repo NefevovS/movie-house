@@ -1,0 +1,52 @@
+.modalWrapper{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0,0,0,0.5);
+}
+.modalConteiner{
+    border-radius: 20px;
+    position: absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-30%);
+    width: 600px;
+    height: 600px;
+    background-color: white;
+}
+.modalTitle{
+    padding-top: 2.2em;
+    color: #6ac045;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modalClose::before{
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background-color: red;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+.modalContent{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #1d1d1d;
+    padding: 30px;
+}
+.modalTorrent{
+    padding: 20px;
+
+}
+.modalTorrent+.modalTorrent{
+    border-left: 1px solid black;
+}

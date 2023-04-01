@@ -16,7 +16,7 @@ const FilmList = () => {
 
   return (
     <div className={s.filmsContainer}>
-      {films.map((film) => (
+      {films?.map((film) => (
         <FilmCard key={film.id} film={film} />
       ))}
     </div>

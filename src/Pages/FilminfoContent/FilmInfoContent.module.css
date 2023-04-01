@@ -1,11 +1,13 @@
 .wrapper{
     padding: 30px 30px;
+    margin: 0 auto;
+    max-width: 1200px ;
+    min-height: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    column-gap: 50px;
     color: white;
-}
-.wrapper h1{
-    color: inherit;
+    background-color: #1d1d1d;
 }
 .cover__wrapper{
     width: 263px;
@@ -13,19 +15,67 @@
     background-color: white;
     padding: 5px;
 }
+.btn{
+    height: 39px;
+    width: 263px;
+    font-size: 1.1em;
+   }
 .btnGreen{
     background: #6ac045;
 }
 .btnBlue{
     background: #00FFE7A3;
 }
-.btn{
-    height: 39px;
-    width: 263px;
-    font-size: 1.1em
-}
+
 .leftColumnWrapper{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+}
+.contentInfo h1{
+        font-size: 2.5em;
+        margin-bottom: 24px;
+        line-height: 42px;
+    }
+.contentInfo h2{
+    line-height: 24px;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+.contentInfo h3 div{
+    display: inline-block;
+    padding:3px;
+
+}
+.contentInfo h3 div+div{
+  border-left: 1px white solid;
+}
+
+.pullLeft{
+    float: left !important;
+    font-style: italic;
+     font-size: 1.1em;
+}
+.linkAlight{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.torrentLink
+{ display: inline-block;
+    background: rgba(27,27,35,.4);
+    padding: 5px 12px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,.16);
+    font-size: .8em;
+    color: #fff;
+    margin-left: 5px;
+
+}
+.raitingWrapper{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 15px;
 }

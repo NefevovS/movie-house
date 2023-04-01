@@ -30,7 +30,7 @@ const FilmCard = ({ film }) => {
           </div>
           <div>{film.rating}/10</div>
           <div>
-            {film.genres.map((genre) => (
+            {film.genres?.map((genre) => (
               <div key={genre} style={{ paddingBottom: "10px" }}>
                 {genre}
               </div>
