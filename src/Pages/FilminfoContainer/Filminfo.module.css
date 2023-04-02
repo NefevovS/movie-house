@@ -1,10 +1,13 @@
+.filminfo{
+    margin-top: 70px;
+}
 .wrapper{
     padding: 30px 30px;
     margin: 0 auto;
     max-width: 1200px ;
     min-height: 100vw;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     column-gap: 50px;
     color: white;
     background-color: #1d1d1d;
@@ -19,7 +22,7 @@
     height: 39px;
     width: 263px;
     font-size: 1.1em;
-   }
+}
 .btnGreen{
     background: #6ac045;
 }
@@ -33,10 +36,10 @@
     row-gap: 10px;
 }
 .contentInfo h1{
-        font-size: 2.5em;
-        margin-bottom: 24px;
-        line-height: 42px;
-    }
+    font-size: 2.5em;
+    margin-bottom: 24px;
+    line-height: 42px;
+}
 .contentInfo h2{
     line-height: 24px;
     font-size: 1.25em;
@@ -48,13 +51,13 @@
 
 }
 .contentInfo h3 div+div{
-  border-left: 1px white solid;
+    border-left: 1px white solid;
 }
 
 .pullLeft{
     float: left !important;
     font-style: italic;
-     font-size: 1.1em;
+    font-size: 1.1em;
 }
 .linkAlight{
     display: flex;

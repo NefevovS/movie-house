@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FilmCard from "../FilmCard/FilmCard";
 import s from "./FilmList.module.css";
-import { FilmServise } from "../../API/FilmServise";
+import { FilmServise } from "../../servise/FilmServise";
 
 const FilmList = () => {
   const [films, setFilms] = useState([]);

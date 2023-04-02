@@ -3,7 +3,7 @@ import FilmList from "./Components/FilmList/FilmList";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { Route, Routes } from "react-router-dom";
-import FilminfoContainer from "./Pages/FilminfoContainer/FilminfoContainer";
+import Filminfo from "./Pages/FilminfoContainer/Filminfo";
 function App() {
   return (
     <div className="app">
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FilmList />} />
         <Route path="/home" element={<FilmList />} />
-        <Route path="/movies/:id" element={<FilminfoContainer />} />
+        <Route path="/movies/:id" element={<Filminfo />} />
       </Routes>
       <Footer />
     </div>

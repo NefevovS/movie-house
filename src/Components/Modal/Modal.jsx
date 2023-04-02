@@ -17,7 +17,7 @@ const stylesArray=[s.modalWrapper]
         <div className={s.modalTitle}>Select movie quality</div>
           <span className={s.modalClose} onClick={()=>setModalVisible(false)}></span>
           <div className={s.modalContent}>
-                  {torrents?.map((torrent)=><div className={s.modalTorrent}>
+                  {torrents?.map((torrent)=><div key={torrent.size_bytes} className={s.modalTorrent}>
                       {(torrent.quality==="720p"&& <Quality720p/>)||
                           (torrent.quality==="1080p"&&<Quality1080p/>)||
                           (torrent.quality==="2160p"&&<Quality2160p/>)
