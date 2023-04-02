@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import s from "./FilmInfoContent.module.css";
 import FilmInfoButton from "../../UI/Button/FilmInfoButtons/FilmInfoButton";
 import star from "../../assets/image/star.png";
@@ -6,15 +6,18 @@ import heart from "../../assets/image/heart.png";
 import imdb from "../../assets/image/logo-imdb.svg";
 import Modal from "../../Components/Modal/Modal";
 const FilmInfoContent = ({ film }) => {
+  console.log(film)
+  const [modalVisible,setModalVisible]=useState(false)
   return (
     <div className={s.wrapper}>
       <div className={s.leftColumnWrapper}>
         <div className={s.cover__wrapper}>
           <img src={film.large_cover_image} alt="film" />
         </div>
-        <FilmInfoButton className={[s.btn, s.btnGreen].join(" ")}>
+        <FilmInfoButton className={[s.btn, s.btnGreen].join(" ")} onClick={()=>setModalVisible(true)}>
           Download
         </FilmInfoButton>
+
         {/*<FilmInfoButton className={[s.btn, s.btnBlue].join(" ")}>*/}
         {/*  Watch Now*/}
         {/*</FilmInfoButton>*/}
@@ -58,7 +61,7 @@ const FilmInfoContent = ({ film }) => {
           <img src={star} alt="star" />
         </div>
       </div>
-      <Modal/>
+      <Modal torrents={film.torrents} modalVisible={modalVisible} setModalVisible={setModalVisible}/>
     </div>
   );
 };
