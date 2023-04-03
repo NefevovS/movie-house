@@ -25,14 +25,14 @@ const FilmList = () => {
   }, [totalCountPages,page]);
 
   return (
-      <>
+      <div style={{marginTop:"90px",marginBottom:"50px"}}><Paggination setPage={setPage} page={page} pageArray={pageArray}/>
         <div className={s.filmsContainer}>
           {films?.map((film) => (
               <FilmCard key={film.id} film={film} />
           ))}
         </div>
         <Paggination setPage={setPage} page={page} pageArray={pageArray}/>
-      </>
+      </div>
 
   );
 };
