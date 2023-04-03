@@ -3,7 +3,7 @@ import s from "./Paggination.module.css";
 
 const Paggination = ({ page, setPage, pageArray }) => {
   const newArray=pageArray.filter((pg)=> (pg<page+5)&&(pg>page-5))
-  return (
+    return (
     <div className={s.pagginationContainer}>
       {newArray.map((p) => (
         <div

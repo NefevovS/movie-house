@@ -10,7 +10,7 @@ import { ReactComponent as Glass } from "../../assets/image/glass.svg";
 const FilmList = () => {
   const [films, setFilms] = useState([]);
   const [page, setPage] = useState(1);
-  const [filmsLimit, setFilmsLimit] = useState(12);
+  const [filmsLimit, setFilmsLimit] = useState(12)
   const [totalCountPages, setTotalCountPages] = useState(0);
   const pageArray = usePagination(totalCountPages);
   const [searchQuery, setSearchQuery] = useState("");
@@ -18,10 +18,11 @@ const FilmList = () => {
     const response = await FilmServise.getAll(page, filmsLimit, searchQuery);
     setFilms(response.data.data.movies);
     setTotalCountPages(getPages(response.data.data.movie_count, filmsLimit));
+      console.log(filmsLimit)
   };
 
   useEffect(() => {
-    fetchFilm();
+    fetchFilm(page, filmsLimit, searchQuery);
   }, [page]);
 
 
