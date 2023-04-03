@@ -1,0 +1,22 @@
+.pagginationContainer{
+    margin: 20px auto;
+    width: 50%;
+}
+.page{
+    display: inline-block;
+    color: #6AC045;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #1d1d1d;
+    font-weight: bold;
+}
+.page.active{
+    border: 2px solid #9acc1c ;
+}
+.page:hover{
+    color: #9acc1c;
+   }
+.page.invisible{
+    display: none;
+}
