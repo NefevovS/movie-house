@@ -1,11 +1,12 @@
 import axios from "axios";
 
 export class FilmServise {
-  static async getAll(page = 1, limit = 12) {
+  static async getAll(page = 1, limit = 12,query_term="") {
     return await axios("https://yts.mx/api/v2/list_movies.json", {
       params: {
         limit,
         page,
+        query_term,
       },
     });
   }
