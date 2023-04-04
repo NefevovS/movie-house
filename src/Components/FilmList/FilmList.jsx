@@ -6,6 +6,7 @@ import { getPages } from "../../Utils/getPages";
 import Pagination from "../Pagination/Pagination";
 import { usePagination } from "../../hooks/usePaggination";
 import { ReactComponent as Glass } from "../../assets/image/glass.svg";
+import SearchInput from "../../UI/Input/SearchInput";
 
 const FilmList = () => {
   const [films, setFilms] = useState([]);
@@ -34,18 +35,7 @@ const FilmList = () => {
           fetchFilm(page, filmsLimit, searchQuery);
         }}
       >
-        <div className={s.input__wrapper}>
-          <Glass className={s.glass} />
-          <input
-            type="text"
-            style={{ color: "#919191" }}
-            placeholder="Поиск..."
-            value={searchQuery}
-            onChange={(e) => {
-              setSearchQuery(e.target.value);
-            }}
-          />
-        </div>
+        <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
       </form>
 
       <Pagination setPage={setPage} page={page} totalCountPages={totalCountPages} />
