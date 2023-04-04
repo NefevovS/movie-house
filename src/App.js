@@ -4,7 +4,6 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import Filminfo from "./Pages/FilminfoContainer/Filminfo";
-import {useState} from "react";
 function App() {
 
   return (
@@ -12,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/movie-house" element={<FilmList/>} />
-        <Route path="/movies/:id" element={<Filminfo />} />
+        <Route path="/movie-house/movies/:id" element={<Filminfo />} />
       </Routes>
       <Footer />
     </div>

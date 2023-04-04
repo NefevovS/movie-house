@@ -12,7 +12,6 @@ const MovieSuggestions = ({ id }) => {
   const fetchFilms = async (id) => {
     const response = await FilmServise.getSuggestionsFilmByID(id);
     setFilms(response.data.data.movies);
-    console.log(response.data.data.movies);
   };
   const [fetching, isLoading, error] = useFetching(fetchFilms);
   useEffect(() => {
@@ -33,7 +32,7 @@ const MovieSuggestions = ({ id }) => {
                   <img
                     src={film.medium_cover_image}
                     alt="cover"
-                    onClick={() => router(`/movies/${film.id}`)}
+                    onClick={() => router(`/movie-house/movies/${film.id}`)}
                   />
                 </div>
               </div>
