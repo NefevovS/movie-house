@@ -12,7 +12,7 @@ const FilmList = () => {
   const [page, setPage] = useState(1);
   const [filmsLimit, setFilmsLimit] = useState(12)
   const [totalCountPages, setTotalCountPages] = useState(0);
-  const pageArray = usePagination(totalCountPages);
+
   const [searchQuery, setSearchQuery] = useState("");
   const fetchFilm = async (page, filmsLimit, searchQuery) => {
     const response = await FilmServise.getAll(page, filmsLimit, searchQuery);
@@ -48,14 +48,14 @@ const FilmList = () => {
         </div>
       </form>
 
-      <Paggination setPage={setPage} page={page} pageArray={pageArray} />
+      <Paggination setPage={setPage} page={page} totalCountPages={totalCountPages} />
 
       <div className={s.filmsContainer}>
         {films?.map((film) => (
           <FilmCard key={film.id} film={film} />
         ))}
       </div>
-      <Paggination setPage={setPage} page={page} pageArray={pageArray} />
+      <Paggination setPage={setPage} page={page}  totalCountPages={totalCountPages} />
     </div>
   );
 };
