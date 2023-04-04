@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/movie-house/static/css/main.aa9de814.css",
-    "main.js": "/movie-house/static/js/main.cb842f48.js",
+    "main.js": "/movie-house/static/js/main.53d3585f.js",
     "static/media/heart.png": "/movie-house/static/media/heart.a13e3857c7c7f11756ac.png",
     "static/media/logo-imdb.svg": "/movie-house/static/media/logo-imdb.92f4a70e9fc06bc2747f7901ff068349.svg",
     "static/media/glass.svg": "/movie-house/static/media/glass.1c751e03da2451211b1e4d9890898d12.svg",
     "index.html": "/movie-house/index.html",
     "main.aa9de814.css.map": "/movie-house/static/css/main.aa9de814.css.map",
-    "main.cb842f48.js.map": "/movie-house/static/js/main.cb842f48.js.map"
+    "main.53d3585f.js.map": "/movie-house/static/js/main.53d3585f.js.map"
   },
   "entrypoints": [
     "static/css/main.aa9de814.css",
-    "static/js/main.cb842f48.js"
+    "static/js/main.53d3585f.js"
   ]
 }
