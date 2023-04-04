@@ -32,7 +32,7 @@ const MovieSuggestions = ({ id }) => {
                   <img
                     src={film.medium_cover_image}
                     alt="cover"
-                    onClick={() => router(`/movie-house/movies/${film.id}`)}
+                    onClick={() => router(`/movies/${film.id}`)}
                   />
                 </div>
               </div>

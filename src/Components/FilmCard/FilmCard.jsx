@@ -36,7 +36,7 @@ const FilmCard = ({ film }) => {
               </div>
             ))}
           </div>
-          <span className={s.btn} onClick={() => router(`/movie-house/movies/${film.id}`)}>
+          <span className={s.btn} onClick={() => router(`/movies/${film.id}`)}>
             Подробнее
           </span>
         </div>
