@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import s from "./Paggination.module.css";
+import s from "./Pagination.module.css";
 import {usePagination} from "../../hooks/usePaggination";
 
 const Pagination = ({ page, setPage, totalCountPages }) => {
@@ -9,7 +9,7 @@ const Pagination = ({ page, setPage, totalCountPages }) => {
   );
 
   return (
-    <div className={s.pagginationContainer}>
+    <div className={s.paginationContainer}>
       {displayedPageArray.map((p) => (
         <div
           className={p === page ? [s.page, s.active].join(" ") : s.page}

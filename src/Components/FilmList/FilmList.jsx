@@ -3,7 +3,7 @@ import FilmCard from "../FilmCard/FilmCard";
 import s from "./FilmList.module.css";
 import { FilmServise } from "../../servise/FilmServise";
 import { getPages } from "../../Utils/getPages";
-import Paggination from "../Paggination/Paggination";
+import Pagination from "../Pagination/Pagination";
 import { usePagination } from "../../hooks/usePaggination";
 import { ReactComponent as Glass } from "../../assets/image/glass.svg";
 
@@ -48,14 +48,14 @@ const FilmList = () => {
         </div>
       </form>
 
-      <Paggination setPage={setPage} page={page} totalCountPages={totalCountPages} />
+      <Pagination setPage={setPage} page={page} totalCountPages={totalCountPages} />
 
       <div className={s.filmsContainer}>
         {films?.map((film) => (
           <FilmCard key={film.id} film={film} />
         ))}
       </div>
-      <Paggination setPage={setPage} page={page}  totalCountPages={totalCountPages} />
+      <Pagination setPage={setPage} page={page} totalCountPages={totalCountPages} />
     </div>
   );
 };
