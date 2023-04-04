@@ -1,6 +1,6 @@
 import React from 'react';
 import s from "./SearchInput.module.css";
-import {ReactComponent as Glass} from "../../assets/image/glass.svg";
+import {ReactComponent as Glass} from "../../../assets/image/glass.svg";
 
 const SearchInput = ({searchQuery,setSearchQuery}) => {
     return (

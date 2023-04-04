@@ -6,7 +6,7 @@ import { getPages } from "../../Utils/getPages";
 import Pagination from "../Pagination/Pagination";
 import { usePagination } from "../../hooks/usePaggination";
 import { ReactComponent as Glass } from "../../assets/image/glass.svg";
-import SearchInput from "../../UI/Input/SearchInput";
+import SearchInput from "../../UI/Input/SearchInput/SearchInput";
 
 const FilmList = () => {
   const [films, setFilms] = useState([]);
