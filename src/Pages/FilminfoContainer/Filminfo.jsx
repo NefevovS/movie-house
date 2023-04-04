@@ -53,7 +53,7 @@ const Filminfo = () => {
                       key={torrent.quality}
                       className={s.torrentLink}
                       href={torrent.url}
-                      title={"Dowload " + film.title + torrent.quality + " Torrent"}
+                      title={"Download " + film.title + torrent.quality + " Torrent"}
                   >
                     {torrent.quality}
                   </a>
