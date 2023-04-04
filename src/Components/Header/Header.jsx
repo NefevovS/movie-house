@@ -12,7 +12,7 @@ const Header = () => {
 
       <ul className={s.nav__wrapper}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/movie-house">Home</Link>
         </li>
         <li>
           <a href="#!">4K</a>
