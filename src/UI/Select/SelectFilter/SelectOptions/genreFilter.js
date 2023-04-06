@@ -1,5 +1,6 @@
 export const genreFilter = {
   defaultValue: { value: "", text: "All" },
+  label:"Genre:",
   options: [
     { text: "Action", value: "action" },
     { text: "Adventure", value: "adventure" },

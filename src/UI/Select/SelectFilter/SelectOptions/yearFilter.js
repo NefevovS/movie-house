@@ -1,5 +1,6 @@
 export const yearFilter = {
   defaultValue: { value: "", text: "All" },
+  label:"Year:",
   options: [
     { value: "2023", text: "2023" },
     { value: "2022", text: "2022" },

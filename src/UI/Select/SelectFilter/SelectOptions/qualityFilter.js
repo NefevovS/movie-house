@@ -1,5 +1,6 @@
 export const qualityFilter = {
   defaultValue: { value: "", text: "All" },
+  label:"Quality:",
   options: [
     { value: "480p", text: "480p" },
     { value: "720p", text: "720p" },
