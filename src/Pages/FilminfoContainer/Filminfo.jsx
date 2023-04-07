@@ -19,7 +19,7 @@ const Filminfo = () => {
     const response = await FilmServise.getFilmByID(id);
     setFilm(response.data.data.movie);
   };
-  console.log(params)
+
   const [fetching, isLoading, error] = useFetching(fetchFilm);
   useEffect(() => {
     fetching(params.id);

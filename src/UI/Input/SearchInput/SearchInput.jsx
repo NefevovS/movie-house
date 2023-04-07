@@ -9,7 +9,7 @@ const SearchInput = ({searchQuery,setSearchQuery}) => {
             <input
                 type="text"
                 style={{ color: "#919191" }}
-                placeholder="Поиск..."
+                placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => {
                     setSearchQuery(e.target.value);

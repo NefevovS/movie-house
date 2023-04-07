@@ -18,7 +18,7 @@ const FilmList = () => {
     const response = await FilmServise.getAll(page, filmsLimit, searchQuery);
     setFilms(response.data.data.movies);
     setTotalCountPages(getPages(response.data.data.movie_count, filmsLimit));
-      console.log(filmsLimit)
+
   };
 
   useEffect(() => {

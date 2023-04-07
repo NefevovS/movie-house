@@ -1,10 +1,9 @@
-import React, {useEffect, useMemo, useState} from "react";
+import React, { useEffect, useState } from "react";
 import SearchInput from "../../UI/Input/SearchInput/SearchInput";
 import s from "./BrowseMovies.module.css";
 import { genreFilter } from "../../UI/Select/SelectFilter/SelectOptions/genreFilter";
 import { qualityFilter } from "../../UI/Select/SelectFilter/SelectOptions/qualityFilter";
 import { ratingFilter } from "../../UI/Select/SelectFilter/SelectOptions/ratingFilter";
-import { yearFilter } from "../../UI/Select/SelectFilter/SelectOptions/yearFilter";
 import SelectFilter from "../../UI/Select/SelectFilter/SelectFilter";
 import Pagination from "../Pagination/Pagination";
 import FilmCard from "../FilmCard/FilmCard";
@@ -18,8 +17,6 @@ const BrowseMovies = () => {
     rating: "",
     year: "",
   });
-
-
 
   const setSearchQueryInBrowseMovies = (query) => {
     setFilters({ ...filters, searchQuery: query });
@@ -40,14 +37,12 @@ const BrowseMovies = () => {
       filters.year
     );
     setFilms(response.data.data.movies);
-    console.log(filters);
-    console.log(response.data.data.movies);
     setTotalCountPages(getPages(response.data.data.movie_count, filmsLimit));
   };
 
-  useEffect(() => {
-    fetchFilm(page, filmsLimit, filters);
-  }, [page]);
+  // useEffect(() => {
+  //   fetchFilm(page, filmsLimit, filters);
+  // }, [page]);
 
   return (
     <div className={s.browseMoviesWrapper}>
