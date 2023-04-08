@@ -25,11 +25,11 @@ const FilmCard = ({ film }) => {
               : [s.overlay].join(" ")
           }
         >
-          <div>
+          <div className={s.star}>
             <img src={star} alt="star" />
           </div>
           <div>{film.rating}/10</div>
-          <div>
+          <div className={s.genre}>
             {film.genres?.map((genre) => (
               <div key={genre} style={{ paddingBottom: "10px" }}>
                 {genre}

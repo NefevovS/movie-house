@@ -16,14 +16,14 @@ const Header = () => {
           <Link to="/browse-movies">Browse movies</Link>
         </li>
       </ul>
-      <ul className={s.login_wrapper}>
-        <li>
-          <a href="#!">Login</a>
-        </li>
-        <li>
-          <a href="#!">Register</a>
-        </li>
-      </ul>
+      {/*<ul className={s.login_wrapper}>*/}
+      {/*  <li>*/}
+      {/*    <a href="#!">Login</a>*/}
+      {/*  </li>*/}
+      {/*  <li>*/}
+      {/*    <a href="#!">Register</a>*/}
+      {/*  </li>*/}
+      {/*</ul>*/}
     </header>
   );
 };
